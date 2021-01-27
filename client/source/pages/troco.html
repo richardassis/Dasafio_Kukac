@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Kukac|Troco</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        
+        body, html {
+          height: 50%;
+          line-height: 1.8;
+        }
+        
+        /* Full height image header */
+        .bgimg-1 {
+          background-position: center;
+          background-size: cover;
+          background-image: url("/w3images/mac.jpg");
+          min-height: 50%;
+        }
+        
+        .w3-bar .w3-button {
+          padding: 10px;
+        }
+        </style>
+        <body>
+            <!-- Links (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="../index.html" class="w3-bar-item w3-button w3-wide">@KUKAC</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="palindromo.html" class="w3-bar-item w3-button"><i class='fas fa-coins'></i> NÚMEROS PALÍNDROMOS</a>
+        <a href="troco.html" class="w3-bar-item w3-button"><i class='fa fa-usd'></i> CALCULO DE TROCO</a>
+        <a href="veiculo.html" class="w3-bar-item w3-button"><i class='fas fa-car'></i> CADASTRO DE CARRO</a>
+        <a href="moto.html" class="w3-bar-item w3-button"><i class="fas fa-motorcycle"></i> CADASTRO DE MOTO</a>
+        <a href="consultar-cep.html" class="w3-bar-item w3-button"><i class="fas fa-home"></i> BUSCA PELO CEP</a>
+      </div>
+    </div>
+  </div>
+        </body>
+  
+        
+    
+  <!-- Content -->
+  <div class="w3-content" style="max-width:1100px;margin-top:60px;margin-bottom:50px">
+
+    <div class="w3-panel" style="margin-left: 360px;">
+      <h1><b>CALCULO DE TROCO</b></h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="content-text">
+                    <h5 class="bealtiful-text">Calcule o troco da sua compra</h5>
+                    <p class="text-muted"> Ao informar o valor da compra e do pagamento em dinheiro, será calculado o
+                        valor do troco. Além disso, você saberá quantas em quantas notas de um, dez e cem virá o seu
+                        troco.</p>
+                    <p class="text-muted">
+                    </p>
+                    <p class="bealtiful-text">Digite ao lado o valor da compra e do pagamento para calcular o troco.</p>
+                    <p class="bealtiful-text">Obs: Informe o valor absoluto, ou seja, sem os centavos.</p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-container">
+                    <form>
+                        <div class="form-group">
+                            <label class="bealtiful-text">Valor da compra</label>
+                            <input type="number" class="form-control" id="inputPurchase" maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label class="bealtiful-text">Valor do pagamento</label>
+                            <input type="number" class="form-control" id="inputPayment" maxlength="10">
+                        </div>
+                    </form>
+                    <button class="btn btn-primary" id="button-calc">Calcular</button>
+                </div>
+            </div>
+        </div>
+        <div class="content-text" style="margin-top: 0;" id="result-troco" hidden>
+            <h4 class="bealtiful-text">Resultado:</h4>
+            <p class="bealtiful-text">Troco: <span class="text-muted" id="troco"></span></p>
+            <p class="bealtiful-text"> Notas de um: <span class="text-muted" id="notas-um"></span></p>
+            <p class="bealtiful-text">Notas de dez: <span class="text-muted" id="notas-dez"></span></p>
+            <p class="bealtiful-text">Notas de cem: <span class="text-muted" id="notas-cem"></span></p>
+        </div>
+        <div class="content-text" id="error-troco" hidden>
+            <p style="color: red">Não foi possível calcular o troco, pois valor da compra é maior que o valor do pagamento.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+                <a href="https://www.facebook.com/richard.otavio.16" class="btn-floating btn-fb mx-1">
+                    <i class="fab fa-facebook-f"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://instagram.com/richardassis_?igshid=1jecre8oe1v40" class="btn-floating btn-tw mx-1">
+                    <i class="fab fa-instagram"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="http://linkedin.com/in/richard-ot%C3%A1vio-8077aa193" class="btn-floating btn-li mx-1">
+                    <i class="fab fa-linkedin-in"> </i>
+                </a>
+            </li>
+        </ul>
+
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">©2021 Criado por Richard Otávio </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://kit.fontawesome.com/15d4c201a9.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="../js/troco.js"></script>
+</body>
+
+</html>

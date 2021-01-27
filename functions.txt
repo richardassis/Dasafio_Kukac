@@ -1,0 +1,32 @@
+public countNotes(compra : number, pagamento : number) : any{
+		let count = new Array()
+
+		let value = pagamento - compra
+
+		let countNotas1 = value%10
+		let countNotas10 = ((value%100) - countNotas1)/10
+		let countNotas100 = (value - (countNotas1 + countNotas10*10))/100 
+
+		count.push(countNotas1, countNotas10, countNotas100)
+
+		return count
+	}
+
+    public verifyPalindrome(first : number, latest : number) : any{
+		let numLength 
+		let numAux
+		let palindromes = new Array()
+		for (let num = first; num <= latest; num++) {
+			numAux = num.toString()
+			numLength = numAux.length
+
+			if (numLength > 1) {
+				if (num == parseInt(numAux.split('').reverse().join(''))) {
+					palindromes.push(num)
+				}
+			}
+		}
+		return palindromes
+	}
+
+    

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Palindromo | Developer</title>
+</head>
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    
+    body, html {
+      height: 50%;
+      line-height: 1.8;
+    }
+    
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("/w3images/mac.jpg");
+      min-height: 50%;
+    }
+    
+    .w3-bar .w3-button {
+      padding: 10px;
+    }
+    </style>
+  <body>
+    
+  <!-- Links (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white-small" id="myNavbar">
+      <a href="../index.html" class="w3-bar-item w3-button w3-wide">@KUKAC</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="palindromo.html" class="w3-bar-item w3-button"><i class='fas fa-coins'></i> NÚMEROS PALÍNDROMOS</a>
+        <a href="troco.html" class="w3-bar-item w3-button"><i class='fa fa-usd'></i> CALCULO DE TROCO</a>
+        <a href="veiculo.html" class="w3-bar-item w3-button"><i class='fas fa-car'></i> CADASTRO DE CARRO</a>
+        <a href="moto.html" class="w3-bar-item w3-button"><i class="fas fa-motorcycle"></i> CADASTRO DE MOTO</a>
+        <a href="consultar-cep.html" class="w3-bar-item w3-button"><i class="fas fa-home"></i> BUSCA PELO CEP</a>
+      </div>
+    </div>
+  </div>
+  </body>
+
+
+<div class="w3-content" style="max-width:1100px;margin-top:60px;margin-bottom:50px">
+
+    <div class="w3-panel" style="margin-left: 360px;">
+      <h1><b>CADASTRE SUA MOTO</b></h1>
+    </div>
+   
+        <div id="register-section">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="content-text">
+                        <h5 class="bealtiful-text">Preencha o formulário ao lado com as informações correspondentes para
+                            sua motocicleta.</h5>
+                    </div>
+                    <div class="message">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-container">
+                        <form id="form-motos">
+                            <div class="form-group">
+                                <label class="bealtiful-text">Modelo</label>
+                                <input type="text" class="form-control" id="inputModel" maxlength="3">
+                            </div>
+                            <div class="form-group">
+                                <label class="bealtiful-text">Quantidade de passageiros</label>
+                                <select class="form-control" id="inputQtdPassengers" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="button-register">Cadastrar</button>
+                            <button class="btn btn-primary" id="show-registered-motos">Visualizar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="view-section">
+            <div id="empty-message" class="content-text" hidden>
+                <span style="color: red">Não há motos cadastradas.</span>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+                <a href="https://www.facebook.com/brunosantosprotec" class="btn-floating btn-fb mx-1">
+                    <i class="fab fa-facebook-f"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.instagram.com/brunauu1/" class="btn-floating btn-tw mx-1">
+                    <i class="fab fa-instagram"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/brunosantosprotec/" class="btn-floating btn-li mx-1">
+                    <i class="fab fa-linkedin-in"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://github.com/brunau1" class="btn-floating btn-dribbble mx-1">
+                    <i class="fab fa-github"> </i>
+                </a>
+            </li>
+        </ul>
+        <!-- Social buttons -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">©2021 Criado por Richard Otávio
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://kit.fontawesome.com/15d4c201a9.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../js/moto.js"></script>
+</body>
+
+</html>
